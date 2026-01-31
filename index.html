@@ -18,7 +18,7 @@
         .pastel-gradient {
             background: linear-gradient(135deg, #fdf2f2 0%, #f0f4ff 50%, #f3e8ff 100%);
         }
-        /* Animaciones personalizadas para ese look de alto nivel */
+        /* Animaciones personalizadas */
         @keyframes fadeInLeft {
           from { opacity: 0; transform: translateX(-20px); }
           to { opacity: 1; transform: translateX(0); }
@@ -34,6 +34,20 @@
         .animate-fadeInLeft { animation: fadeInLeft 1s ease-out forwards; }
         .animate-fadeInRight { animation: fadeInRight 1s ease-out forwards; }
         .animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
+        
+        /* Animación para decoraciones flotantes */
+        @keyframes blob {
+          0% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+          100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
     </style>
 <script type="importmap">
 {
@@ -50,7 +64,7 @@
 </head>
 <body class="bg-[#FAF9F6] text-[#4A4A4A] overflow-x-hidden">
     <div id="root"></div>
-    <!-- Punto de entrada crítico para que React funcione -->
+    <!-- Vite procesará este archivo automáticamente durante el build -->
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
